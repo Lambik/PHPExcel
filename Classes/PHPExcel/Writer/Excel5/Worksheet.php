@@ -2883,6 +2883,9 @@ class PHPExcel_Writer_Excel5_Worksheet extends PHPExcel_Writer_Excel5_BIFFwriter
                     case PHPExcel_Cell_DataValidation::OPERATOR_LESSTHANOREQUAL:
                         $operator = 0x07;
                         break;
+                    default:
+                        $operator = 0x00;
+                        break;
                 }
                 $options |= $operator << 20;
 
